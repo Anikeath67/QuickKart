@@ -39,6 +39,6 @@ In production, the backend should generate the unique order ID.
  - open the project
  - install dependencies
  - Run the app
-<img width="1272" height="2772" alt="Screenshot_20260825-003702_quickkart" src="https://github.com/user-attachments/assets/9ae658d3-5e2b-4820-81fa-8054dc54ef36" />
-<img width="1272" height="2772" alt="Screenshot_20260825-003655_quickkart" src="https://github.com/user-attachments/assets/fb0aa807-1bc8-479f-bd21-2166bb176c7a" />
+<img width="200" height="300" alt="Screenshot_20260825-003702_quickkart" src="https://github.com/user-attachments/assets/9ae658d3-5e2b-4820-81fa-8054dc54ef36" />
+<img width="200" height="300" alt="Screenshot_20260825-003655_quickkart" src="https://github.com/user-attachments/assets/fb0aa807-1bc8-479f-bd21-2166bb176c7a" />
 

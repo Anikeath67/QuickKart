@@ -34,3 +34,8 @@ The assignment uses a mock order flow. A successful order displays:
 
 In production, the backend should generate the unique order ID.
 
+## To Run Project
+
+  - open the project
+  - Install all dependencies
+  - Run the app

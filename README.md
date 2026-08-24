@@ -25,16 +25,6 @@ QuickKart is a simple Flutter shopping application created as a mini-project.
 
 
 
-## Internet unavailable handling
-
-The product service is separated from the UI so a real REST API can be plugged in later. If the data request fails, the app catches the exception and displays a clear error message with a Retry button instead of crashing.
-
-The current mini-project intentionally keeps the fallback simple.
-
-### Production offline improvement
-
-For a production application, I would cache the latest successful product response locally using SQLite, Hive, Isar, or another local database. When the device is offline, the application could display cached products with an "Offline" indicator. When connectivity returns, the app could refresh the cache from the server.
-
 ## Order
 
 The assignment uses a mock order flow. A successful order displays:

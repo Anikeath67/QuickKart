@@ -23,35 +23,7 @@ QuickKart is a simple Flutter shopping application created as a mini-project.
 | 🥛 Milk | ₹60 |
 | 🍞 Bread | ₹45 |
 
-## Tech Stack
 
-- Flutter
-- Dart
-- Provider
-- Material 3
-
-## Project Structure
-
-- `models/` - data models
-- `providers/` - application state
-- `services/` - data/API layer
-- `screens/` - application screens
-- `widgets/` - reusable UI components
-
-## Run the project
-
-Make sure Flutter is installed.
-
-```bash
-flutter pub get
-flutter run
-```
-
-For Android:
-
-```bash
-flutter run
-```
 
 ## Internet unavailable handling
 

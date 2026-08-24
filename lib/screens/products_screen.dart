@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:connectivity_plus/connectivity_plus.dart';
 import '../models/product.dart';
 import '../services/product_service.dart';
 import '../providers/cart_provider.dart';
@@ -32,6 +33,11 @@ class _ProductsScreenState extends State<ProductsScreen> {
     });
 
     try {
+      final connection = await Connectivity().checkConnectivity();
+      if (connection.contains(ConnectivityResult.none)) {
+        throw Exception('No internet connection');
+      }
+
       final products = await _service.fetchProducts();
       if (!mounted) return;
       setState(() {
@@ -87,22 +93,35 @@ class _ProductsScreenState extends State<ProductsScreen> {
     if (_error != null) {
       return Center(
         child: Padding(
-          padding: const EdgeInsets.all(28),
+          padding: const EdgeInsets.symmetric(horizontal: 28),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Icon(Icons.cloud_off_rounded, size: 70),
-              const SizedBox(height: 18),
+              Icon(
+                Icons.cloud_off_rounded,
+                size: 70,
+                color: Colors.grey.shade600,
+              ),
+              const SizedBox(height: 20),
               const Text(
                 'Products unavailable',
-                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  fontSize: 23,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
               const SizedBox(height: 10),
-              Text(_error!, textAlign: TextAlign.center),
-              const SizedBox(height: 22),
+              const Text(
+                'Unable to load products.\n'
+                'Please check your internet connection.',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 15, height: 1.5),
+              ),
+              const SizedBox(height: 24),
               FilledButton.icon(
                 onPressed: _loadProducts,
-                icon: const Icon(Icons.refresh),
+                icon: const Icon(Icons.refresh_rounded),
                 label: const Text('Retry'),
               ),
             ],

@@ -39,3 +39,4 @@ In production, the backend should generate the unique order ID.
  - open the project
  - install dependencies
  - Run the app
+

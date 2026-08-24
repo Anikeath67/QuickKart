@@ -36,4 +36,6 @@ In production, the backend should generate the unique order ID.
 
 ## To Run Project
 
-The project uses Provider because the state requirements are small and straightforward. The cart state is separated from UI widgets using `ChangeNotifier`. The product service is separated from screens so the mock data source can later be replaced with a real REST API without rewriting the UI.
+ - open the project
+ - install dependencies
+ - Run the app
